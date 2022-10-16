@@ -1,14 +1,14 @@
-def repr_as_sum_of_pow_of(num, base):
+def repr_as_sum_of_pow_of(num: int, base: int):
     array = []
     portion_of_num = num
     while portion_of_num != 0:
         power = 0
-        num_copy = portion_of_num
-        while num_copy >= base:
-            num_copy = num_copy // base
+        multiplier = portion_of_num
+        while multiplier >= base:
+            multiplier = multiplier // base
             power += 1
-        array.append((num_copy, base, power))
-        portion_of_num = portion_of_num - (num_copy * base ** power)
+        array.append((multiplier, base, power))
+        portion_of_num = portion_of_num - (multiplier * base ** power)
 
     return print_as_sum_of_powers_of(array)
 
@@ -25,7 +25,7 @@ def print_as_sum_of_powers_of(array):
     return result
 
 
-s = repr_as_sum_of_pow_of(23, 3)
+s = repr_as_sum_of_pow_of(23, 7)
 print(s)
 
 
