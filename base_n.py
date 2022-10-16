@@ -10,10 +10,10 @@ def repr_as_sum_of_pow_of(num: int, base: int):
         array.append((multiplier, base, power))
         portion_of_num = portion_of_num - (multiplier * base ** power)
 
-    return print_as_sum_of_powers_of(array)
+    return print_as_sum_of_powers(array)
 
 
-def print_as_sum_of_powers_of(array):
+def print_as_sum_of_powers(array):
     result = ""
     index = 0
     for multiplier, base, power in array:
