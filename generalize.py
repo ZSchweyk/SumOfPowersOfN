@@ -5,7 +5,7 @@ def repr_as_sum_of_pow_of(num, base):
         power = 0
         num_copy = portion_of_num
         while num_copy >= base:
-            num_copy = int(num_copy / base)
+            num_copy = num_copy // base
             power += 1
         array.append((num_copy, base, power))
         portion_of_num = portion_of_num - (num_copy * base ** power)
