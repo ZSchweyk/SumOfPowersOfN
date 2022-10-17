@@ -27,7 +27,7 @@ def print_as_sum_of_powers(array):
     return result
 
 
-s = repr_as_sum_of_pow_of(9999999, 2)
+s = repr_as_sum_of_pow_of(9999999, 9)
 print(s)
 
 
